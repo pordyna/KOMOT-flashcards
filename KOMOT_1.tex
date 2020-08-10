@@ -67,6 +67,7 @@
 	{\mathbb{C}^{#1}}}%	
 \renewcommand{\vec}[1]{\underline{#1}}
 \DeclarePairedDelimiter{\innerprod}\langle\rangle
+%\DeclarePairedDelimiter{\norm}{\lVert}{\rVert} 
 \newcommand{\Fr}{\mathcal{F}}
 \newcommand{\Hi}{\mathcal{H}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -117,7 +118,7 @@
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\tags{KOMOT::konvexitaet}
+\tags{KOMOT::Optimierungsprobleme}
 
 \begin{note}
   \xplain{UUID}
@@ -149,4 +150,51 @@
   \xfield{\textit{Optimalwert} oder \textit{Minimalwert}}
 \end{note}
 
+\begin{note}
+	\xplain{UUID}
+	% 1.1.3
+	\tags{konvexitaet}
+	\xfield{Eine Menge $G\subseteq\Rn$ hei"st \textit{konvex}, wenn ...}
+	\begin{field}
+		$\forall_{x,y \in G}$ die Verebindungstrecke zwischen den Punkten auch in $G$ liegt. Formel: 
+		\[\lambda x + (1 - \lambda )y \in G, \quad \forall (x,y,\lambda ) \in (G \times G \times (0, 1)) \]
+	\end{field}
+	\xfield{Sei $G$ \textit{konvex}. Eine Funktion $f:G \rightarrow \R{}$ hei"st \textit{konvex auf} $G$, wenn... }
+	\begin{field}
+	$\forall (x,y,\lambda ) \in (G \times G \times (0, 1))$:
+		\[f(\lambda x + (1-\lambda) y \leq \lambda f(x) + (1 - \lambda) f(y).\]
+	\end{field}
+	\xfield{Wann ist eine Funktion \textit{streng konvex} auf einer kompakten Menge $G$? }
+	\xfield{Wie bei normalen konvexit"at, aber mit $<$ statt $\leq$.}
+		\xfield{Sei $G$ \textit{konvex}. Eine Funktion $f:G \rightarrow \R{}$ hei"st \textit{gleichm"a"sig konvex auf} $G$, wenn... }
+	\begin{field}
+	$\exists \gamma > 0$, so dass $\forall (x,y,\lambda ) \in (G \times G \times (0, 1))$:
+		\[f(\lambda x + (1-\lambda) y \leq \lambda f(x) + (1 - \lambda) f(y) - \gamma \lambda (1 - \lambda ) \norm{x-y}^2 \]
+	\end{field}
+	\begin{field}
+		$B$ offen $G$ konvex und $G\subseteq B \subseteq \Rn$, $f: B \rightarrow \R{}$ diff'bar.
+		$f$ \textit{konvex} g.d.w. ... 
+	\end{field}
+	\begin{field}
+	    $\forall_{x,y \in G}$: 
+		\[f(y) - f(x) \geq \nabla f(x)\tran (y-x). \]
+	\end{field}
+		\begin{field}
+		$B$ offen $G$ konvex und $G\subseteq B \subseteq \Rn$, $f: B \rightarrow \R{}$ diff'bar.
+		$f$ \textit{streng konvex} g.d.w. ... 
+	\end{field}
+	\begin{field}
+	    $\forall_{x,y \in G}, x \neq y$: 
+		\[f(y) - f(x) > \nabla f(x)\tran (y-x). \]
+	\end{field}
+		\begin{field}
+		$B$ offen $G$ konvex und $G\subseteq B \subseteq \Rn$, $f: B \rightarrow \R{}$ diff'bar.
+		$f$ \textit{gleichm"a"sig konvex} g.d.w. ... 
+	\end{field}
+	\begin{field}
+	    $\exists \gamma >0$, so dass $\forall_{x,y\in G}$: 
+		\[f(y) - f(x) \geq \nabla f(x)\tran (y-x) + \gamma\norm{x - y}^2. \]
+	\end{field}
+	
+\end{note}
 \end{document}

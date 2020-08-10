@@ -95,9 +95,10 @@
 \newcommand{\xfield}[1]{
         #1\par
         \vfill
-        {\tiny\texttt{\parbox[t]{\textwidth}{\localtag\\\globaltag\hfill\uuid}}}
+        {\tiny\texttt{\parbox[t]{\textwidth}{\localtag\globaltag\hfill\uuid}}}
         \newpage}
-\newenvironment{field}{}{\newpage}
+\newenvironment{field}{}{\vfill
+        {\tiny\texttt{\parbox[t]{\textwidth}{\localtag\globaltag\hfill\uuid}}} \newpage}
 \newif\ifnote
 \newenvironment{note}{\notetrue}{\notefalse}
 \newcommand{\localtag}{}
@@ -171,6 +172,11 @@
 	$\exists \gamma > 0$, so dass $\forall (x,y,\lambda ) \in (G \times G \times (0, 1))$:
 		\[f(\lambda x + (1-\lambda) y \leq \lambda f(x) + (1 - \lambda) f(y) - \gamma \lambda (1 - \lambda ) \norm{x-y}^2 \]
 	\end{field}
+	\end{note}
+	
+\begin{note}
+	\xplain{UUID}
+	% 1.1 Lemma
 	\begin{field}
 		$B$ offen $G$ konvex und $G\subseteq B \subseteq \Rn$, $f: B \rightarrow \R{}$ diff'bar.
 		$f$ \textit{konvex} g.d.w. ... 
@@ -179,7 +185,7 @@
 	    $\forall_{x,y \in G}$: 
 		\[f(y) - f(x) \geq \nabla f(x)\tran (y-x). \]
 	\end{field}
-		\begin{field}
+	\begin{field}
 		$B$ offen $G$ konvex und $G\subseteq B \subseteq \Rn$, $f: B \rightarrow \R{}$ diff'bar.
 		$f$ \textit{streng konvex} g.d.w. ... 
 	\end{field}
@@ -187,7 +193,7 @@
 	    $\forall_{x,y \in G}, x \neq y$: 
 		\[f(y) - f(x) > \nabla f(x)\tran (y-x). \]
 	\end{field}
-		\begin{field}
+	\begin{field}
 		$B$ offen $G$ konvex und $G\subseteq B \subseteq \Rn$, $f: B \rightarrow \R{}$ diff'bar.
 		$f$ \textit{gleichm"a"sig konvex} g.d.w. ... 
 	\end{field}
@@ -195,6 +201,121 @@
 	    $\exists \gamma >0$, so dass $\forall_{x,y\in G}$: 
 		\[f(y) - f(x) \geq \nabla f(x)\tran (y-x) + \gamma\norm{x - y}^2. \]
 	\end{field}
-	
 \end{note}
+
+\begin{note}
+	\xplain{UUID}
+	% 1.2
+	\tags{definitheit}
+	\begin{field}
+		Wann ist eine quadratische Matrix  $M \in \R{n \times n }$\textit{positiv semidefinit}?
+	\end{field}
+	\begin{field}
+		wenn $s\tran M s \geq 0 \forall s \in \Rn$. ($\Leftrightarrow$: Alle Eigenwerte $ \geq 0$.)
+	\end{field}
+	\xfield{Wann ist eine quadratische Matrix  $M \in \R{n \times n }$\textit{positiv definit}?}
+	\begin{field}
+		wenn $s\tran M s > 0, \quad \forall s \in \Rn / \set{0} $. 
+		($\Leftrightarrow$: Alle Eigenwerte $ > 0$.)
+	\end{field}
+\end{note}
+
+\begin{note}
+	\xplain{UUID}
+	\tags{}
+	% Lemma 1.2
+	\begin{field}
+		$G \subseteq \Rn$ offen und konvex, $f: G \rightarrow \R{}$ zweimal stetig diff'bar.
+		 Dann $f$ is \textit{konvex} auf $G$, genau dann wenn... 
+	\end{field}
+	\begin{field}
+		$\forall x \in G: \nabla^2f(x)$ positiv semidefinit.
+	\end{field}
+	\begin{field}
+		$G \subseteq \Rn$ offen und konvex, $f: G \rightarrow \R{}$ zweimal stetig diff'bar.
+		 Dann $f$ is \textit{streng konvex} auf $G$, genau dann wenn... 
+	\end{field}
+	\begin{field}
+		$\forall x \in G: \nabla^2f(x)$ positiv definit.
+	\end{field}
+	\begin{field}
+		$G \subseteq \Rn$ offen und konvex, $f: G \rightarrow \R{}$ zweimal stetig diff'bar.
+		 Dann $f$ is \textit{streng konvex} auf $G$, genau dann wenn... 
+	\end{field}
+	\begin{field}
+		$\exists \gamma > 0$, so dass $\forall s,x \in G$:
+		\[s\tran \nabla^2f(x)s \geq \gamma \norm{s}^2\] 
+	\end{field}
+\end{note}
+
+\begin{note}
+	\xplain{UUID}
+	\tags{}
+	%Theorem 1.1
+	\begin{field}
+		Die Zielfunktion sei konvex, was gibt uns das( bezogen auf L"osugnen)?
+	\end{field}
+	\begin{field}
+    		Jede lokale L"osung ist auch eine globale L"osung
+	\end{field}
+	\begin{field}
+		Die Zielfunktion sei streng konvex, was gibt uns das( bezogen auf L"osugnen)?
+	\end{field}
+	\begin{field}
+		Es gibt h"ochstens eine globale L"osung.
+	\end{field}
+	\begin{field}
+		Die Zielfunktion sei gleichm"a"sig konvex, was gibt uns das ( bezogen auf L"osugnen)?
+	\end{field}
+	\begin{field}
+		Falls $G$ nicht nur konvex aber auch abgeschlossen und nichtleer, dann besitzt die OA \emph{genau eine} L"osung. 
+	\end{field}
+\end{note}
+
+\begin{note}
+	\xplain{UUID}
+	\tags{}
+	\begin{field}
+		Was ist die Definition der \emph{quasikonvexit"at}?
+	\end{field}
+	\begin{field}
+		$G \subseteq \Rn$ konvex. $f:G \rightarrow \R{}$ hei"st \textit{quasikonvex} auf $G$, wenn 
+		\[f( \lambda x + (1- \lambda ) y) \leq \max\set{f(x), f(y) }\]
+	\end{field}
+	\begin{field}
+	Was bedeutet, dass eine Funktion \textit{pseudokonvex} ist?
+	\end{field}
+	\begin{field}
+		Sei $G$ konvex, $B$ offen mit $G \subseteq B \subseteq \Rn$. Sei $f: B \rightarrow \R{}$ diff'bar.
+		$f$ ist pseudokonvex auf G, wenn $\forall x,y \in G$:
+		\[(y-x)\tran\nabla f(x) \geq 0 \Rightarrow f(y) \geq f(x).\]
+	\end{field}
+	\xfield{Was ist st"arker, \textit{pseudokonvexit"at} oder \textit{quasikonvexit"at}?}
+	\xfield{\textit{pseudokonvexit"at}}
+\end{note}
+
+%1.2
+\tags{KOMOT::Optimalitaetsbedinugngen}
+%1.2.1
+\begin{note}
+	\xplain{UUID}
+	\tags{}
+	\xfield{Definiere den Kegel der zul"assigen Richtungen in $x\in G$.}
+	\begin{field}
+		\[Z(x) \defeq \text{cone}\set{d \in \Rn \ | \ x + \alpha d \in G, \ \ 
+		\forall \alpha \in \left[0, 1 \right] } \]
+		, wobei $\text{cone}(S) \defeq \set{\lambda s \ | \ s\in S, \ \ \lambda \in\left[0, \infty \right)}$.
+	\end{field}
+	\begin{field}
+		Sei $G$ konvex, die Zielfunktion $f$ [... (1)], $x^*$ [... (2)], und es gilt [... (3)], dann ist $x^*$ eine globale L"osung der OA.
+	\end{field}
+	\begin{field}
+		\begin{enumerate}
+			\item pseudokonvex
+			\item  eine lokale L"osung
+			\item $\nabla f(x^*)\tran(x-x^*) \geq 0, \ \ \forall x \in G $
+		\end{enumerate}
+	\end{field}
+\end{note}
+
 \end{document}

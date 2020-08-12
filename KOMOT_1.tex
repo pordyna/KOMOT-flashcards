@@ -95,10 +95,10 @@
 \newcommand{\xfield}[1]{
         #1\par
         \vfill
-        {\tiny\texttt{\parbox[t]{\textwidth}{\localtag\globaltag\hfill\uuid}}}
+        {\tiny\texttt{\parbox[t]{\textwidth}{\localtag \ \globaltag\hfill\uuid}}}
         \newpage}
 \newenvironment{field}{}{\vfill
-        {\tiny\texttt{\parbox[t]{\textwidth}{\localtag\globaltag\hfill\uuid}}} \newpage}
+        {\tiny\texttt{\parbox[t]{\textwidth}{\localtag \ \globaltag\hfill\uuid}}} \newpage}
 \newif\ifnote
 \newenvironment{note}{\notetrue}{\notefalse}
 \newcommand{\localtag}{}
@@ -316,6 +316,143 @@
 			\item $\nabla f(x^*)\tran(x-x^*) \geq 0, \ \ \forall x \in G $
 		\end{enumerate}
 	\end{field}
+\end{note}
+
+% 1.2.2
+\begin{note}
+	\xplain{UUID}
+	\tags{tangentialkegel}
+	\xfield{Definiere den \textit{Tangentialkegel}}
+	\begin{field}
+		\begin{align*}
+		T(x) \defeq \bigg\{ d = \lim_{v\rightarrow \infty} \frac{x^v-x}{t_v} \ \Big | \ 
+		\set{x^v} \subset G, \set{t_v} \subset (0, \infty)  , \\
+		 \lim_{v \rightarrow \infty} x^v = x, \ \lim_{v \rightarrow \infty} t_v = 0 \bigg\} 				
+		\end{align*}
+	\end{field}
+	\xfield{Wann ist $T(x)$ \textit{Tangentialkegel} gleich $\Rn$?}
+	\xfield{Falls $x$ im inneren von $G$ ist.}
+\end{note}
+
+%1.2.3
+\begin{note}
+	\xplain{UUID}
+	\tags{linearisierungskegel}
+	\xfield{Definiere den \textit{Linearisierungskegel}.}
+	\begin{field}
+		\begin{align*}
+			L(x) \defeq \set{ d \ \big| \ \nabla g_i(x)\tran d \leq 0 \text{ f"ur }  \ i \in I_0(x),  \nabla h(x)\tran d =0 }
+		\end{align*}
+		mit $I_0(x) \defeq \set{i \in I \ | \ g<_i(x) = 0 }$.
+	\end{field}
+	\xplain{Wie hei"st $I_0$ aus der Definition des \textit{Linearisierungskegels}?}
+	\xplain{Indexmenge der in x \textit{aktiven (Ungleichungs)restriktionen}}
+\end{note}
+
+%Def. 1.4
+\begin{note}
+	\xplain{UUID}
+	\tags{}
+	\xfield{ Wie nennt man die Bedingung, dass $T(x) = L(x)$? }
+	\xfield{ \textit{Abadie Constraint Qualification (\textbf{ACG})}}
+	\xfield{ Wie nennt man die Bedingung, dass $\bar{\text{conv}\left(T(x)\right)}$?}
+	\xfield{\textit{Guignard Constraint Qualification (\textbf{GCQ})}}
+	\xfield{ Wann ist \textit{ACG} erf"ullt?}
+	\xfield{ Falls $T(x) = L(x)$ }
+	\xfield{Wann ist \textit{GCQ} erf"ullt?}
+	\xfield{ Falls $L(x)$ gleich der abgeschlossener konvexen H"ulle }
+\end{note}
+
+\begin{note}
+	\xplain{UUID}
+	\tags{}
+	\xfield{Wie hei"st eine Bedingung die \textit{ACQ} impliziert?}
+	\xfield{Regularit"atsbedingung}
+	\xfield{ Nenne f"unf Regularit"atsbedingungen.}
+	\begin{field}
+		\begin{description}
+		\item[EBCQ] Error Bound Constraint Qualification
+		\item[MFCQ] Mangasarian--Fromori Constraint Qualification
+		\item[LICQ] Linear Independence Constraint Qualification
+		\item[Slater Bedinugng]
+		\item[Affinit"at] $g_i, i\in I_0(x)$  und $h$ sind affin.
+		\end{description}
+	\end{field}
+	\xfield{Wann gilt \textit{EBCQ}?}
+	\begin{field}
+		$\exists \delta >0, C > 0$, sodass $\forall z \in B(x, \delta)$
+		\[\text{dist}[z, G] \leq C \qty(\norm{\max\set{0, g(z)}} + \norm{h(z)})\]
+	\end{field}
+	\xfield{Wann gilt \textit{MFCQ}?}
+	\begin{field}
+		Die Vektoren $\nabla h_1(x), \ldots, \nabla h_p(x)$ sind linear unabh"angig und es gibt ein $s\in \Rn$, so dass
+		\[\nabla g_i(x)\tran s > 0, \ \  \forall i \in I_0(x) \]
+		und
+		\[\nabla h(x)\tran s = 0 . \] 
+	\end{field}
+	\xfield{Wann gilt \textit{LICQ}?}
+	\begin{field}
+		Die Vektoren in der Familie 
+		\[\set{\nabla g_i(x) \ I \ i\in I_0(x)}  \cup \set{\nabla h_j(x) \ | \ j \in J}\]
+		sind linear unabh"angig.
+	\end{field}
+	\xfield{Wann gilt die \textit{Slater Bedingung}?}
+	\begin{field}
+		Die Funktionen $g_1, \ldots, g_m$ sind \textbf{konvex} und $J = \emptyset$.
+		Au"serdem $\exists \bar{x} \in \Rn$, so dass $g_i(\bar{x}) <0 \ \ \forall i \in I$.
+	\end{field}
+\end{note}
+
+%1.2.4
+\begin{note}
+	\xplain{UUID}
+	\tags{KKT}
+	\xfield{Wie Lautet die KKT Bedingung (kurz)?}
+	\xfield{$\nabla f(x^*)\tran d \geq 0 \ \ \forall d \in L(x^*)$}
+	\xfield{ Was besagt \textit{das Lemma von Farkas}?}
+	\begin{field}
+		Seien $A\in \R{n \times m}, \ B\in\R{n \times p}, \ c\in \Rn$. Dann ist von den folgenden zwei Systemen
+		\begin{gather}
+			A \tran z \leq 0,\  B \tran z = 0, \ c \tran z > 0 \\
+			Au + Bv =c, \ \ u\geq 0
+		\end{gather}
+		nur ein l"osbar.
+	\end{field}
+	\xfield{ Wann gielten die KKK-Bedingungen ?}
+	\xfield{GCQ muss erf"ullt werden. Man sucht nach einer Regularit"atsbedingung.}
+	\xfield{ Schreibe das KKT System auf}
+	\begin{field}
+	\begin{gather*}
+		\nabla_x \mathcal{L}(x, u, v) = 0 \\ 
+		h(x) =0 \\ 
+		g(x) \leq 0 \\
+		u \geq 0 \\
+		u \tran g(x) = 0 
+	\end{gather*}
+		und $u \in \R{m}, v \in \R{p}$ 
+	\end{field}
+	\xfield{ Wie ist die Lagrangefunktion definiert?}
+	\begin{field}
+		\[\mathcal{L}(x,u,v) = f(x) + u \tran g(x) + v \tran h(x)\]
+		$\forall (x,u,v) \in \Rn \times \R{m} \times \R{p}$
+	\end{field}
+	\xfield{ Sei $(x^*, u^*, v^*)$ ein KKT--Punkt, wann ist $x^*$ eine globale L"osung?}
+	\xfield{ Falls $f$ \textit{pseudokonvex}, alle $g_i$ \textit{quasikonvex} und $h_j$ \textit{affin linear}. }
+\end{note}
+
+%1.2.5 
+\begin{note}
+	\xplain{UUID}
+	\tags{Sattelpunkte}
+	\xfield{Definiere einen \textit{Sattelpunkt} einer Lagrangefuntion.}
+	\begin{field}
+		Ein Punkt $(x^*, u^*, v^*) \in \Rn \times \R{m}_+ \times\R{p}$ hei"st \textit{Sattelpunkt der Langrange Funtion} $\mathcal{L}$, wenn
+		\[\mathcal{L}(x^*,u,v) \leq \mathcal{L} (x^*, u^*, v^*) \leq \mathcal{L}(x, u^*, v^*)\]
+		$\forall (x,u,v) \in \Rn \times \R{m}_+ \times \R{p}$.
+	\end{field}
+	\xfield{ Sei $(x^*,u^*, v^*)$ ein Sattelpunkt von $\mathcal{L}$, dann \dots}
+	\xfield{\dots $x^*$ eine globale L"osung der OA.}
+	
 \end{note}
 
 \end{document}

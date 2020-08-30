@@ -122,7 +122,7 @@
 \tags{KOMOT::Optimierungsprobleme}
 
 \begin{note}
-  \xplain{UUID}
+  \xplain{926a7d3e-7e31-45e9-bf49-bd34967981a1}
   % 1.1.2 
   \tags{aufgabenstellung}
   \xfield{Was versteht man unter einer \textit{Zielfunktion}?}
@@ -152,7 +152,7 @@
 \end{note}
 
 \begin{note}
-	\xplain{UUID}
+	\xplain{b453bc66-dbc9-4445-898e-d69f7898f0dd}
 	% 1.1.3
 	\tags{konvexitaet}
 	\xfield{Eine Menge $G\subseteq\Rn$ hei"st \textit{konvex}, wenn ...}
@@ -163,19 +163,19 @@
 	\xfield{Sei $G$ \textit{konvex}. Eine Funktion $f:G \rightarrow \R{}$ hei"st \textit{konvex auf} $G$, wenn... }
 	\begin{field}
 	$\forall (x,y,\lambda ) \in (G \times G \times (0, 1))$:
-		\[f(\lambda x + (1-\lambda) y \leq \lambda f(x) + (1 - \lambda) f(y).\]
+		\[f(\lambda x + (1-\lambda) y) \leq \lambda f(x) + (1 - \lambda) f(y).\]
 	\end{field}
 	\xfield{Wann ist eine Funktion \textit{streng konvex} auf einer kompakten Menge $G$? }
 	\xfield{Wie bei normalen konvexit"at, aber mit $<$ statt $\leq$.}
 		\xfield{Sei $G$ \textit{konvex}. Eine Funktion $f:G \rightarrow \R{}$ hei"st \textit{gleichm"a"sig konvex auf} $G$, wenn... }
 	\begin{field}
 	$\exists \gamma > 0$, so dass $\forall (x,y,\lambda ) \in (G \times G \times (0, 1))$:
-		\[f(\lambda x + (1-\lambda) y \leq \lambda f(x) + (1 - \lambda) f(y) - \gamma \lambda (1 - \lambda ) \norm{x-y}^2 \]
+		\[f(\lambda x + (1-\lambda) y) \leq \lambda f(x) + (1 - \lambda) f(y) - \gamma \lambda (1 - \lambda ) \norm{x-y}^2 \]
 	\end{field}
 	\end{note}
 	
 \begin{note}
-	\xplain{UUID}
+	\xplain{4632476d-40e2-47b5-bbca-35f7cf3d5487}
 	% 1.1 Lemma
 	\begin{field}
 		$B$ offen $G$ konvex und $G\subseteq B \subseteq \Rn$, $f: B \rightarrow \R{}$ diff'bar.
@@ -204,7 +204,7 @@
 \end{note}
 
 \begin{note}
-	\xplain{UUID}
+	\xplain{40b22ce9-aa36-4767-9356-920e9b42b0fb}
 	% 1.2
 	\tags{definitheit}
 	\begin{field}
@@ -221,7 +221,7 @@
 \end{note}
 
 \begin{note}
-	\xplain{UUID}
+	\xplain{00a8ae21-6359-426c-8779-150f4a27353a}
 	\tags{}
 	% Lemma 1.2
 	\begin{field}
@@ -240,7 +240,7 @@
 	\end{field}
 	\begin{field}
 		$G \subseteq \Rn$ offen und konvex, $f: G \rightarrow \R{}$ zweimal stetig diff'bar.
-		 Dann $f$ is \textit{streng konvex} auf $G$, genau dann wenn... 
+		 Dann $f$ is \textit{gleichm"a"sig konvex} auf $G$, genau dann wenn... 
 	\end{field}
 	\begin{field}
 		$\exists \gamma > 0$, so dass $\forall s,x \in G$:
@@ -249,7 +249,7 @@
 \end{note}
 
 \begin{note}
-	\xplain{UUID}
+	\xplain{3549ab37-ceda-4214-a3af-35470bbd7690}
 	\tags{}
 	%Theorem 1.1
 	\begin{field}
@@ -273,7 +273,7 @@
 \end{note}
 
 \begin{note}
-	\xplain{UUID}
+	\xplain{4d62a7fe-78a0-4188-be46-aea0d45ea53c}
 	\tags{}
 	\begin{field}
 		Was ist die Definition der \emph{quasikonvexit"at}?
@@ -298,7 +298,7 @@
 \tags{KOMOT::Optimalitaetsbedinugngen}
 %1.2.1
 \begin{note}
-	\xplain{UUID}
+	\xplain{d402bf82-614a-4943-9ae2-d633802088eb}
 	\tags{}
 	\xfield{Definiere den Kegel der zul"assigen Richtungen in $x\in G$.}
 	\begin{field}
@@ -320,7 +320,7 @@
 
 % 1.2.2
 \begin{note}
-	\xplain{UUID}
+	\xplain{5a2815a9-22bb-4242-a5fc-bc76956aba84}
 	\tags{tangentialkegel}
 	\xfield{Definiere den \textit{Tangentialkegel}}
 	\begin{field}
@@ -336,7 +336,7 @@
 
 %1.2.3
 \begin{note}
-	\xplain{UUID}
+	\xplain{32005844-5dd8-4870-957c-75e86e72ab82}
 	\tags{linearisierungskegel}
 	\xfield{Definiere den \textit{Linearisierungskegel}.}
 	\begin{field}
@@ -345,17 +345,17 @@
 		\end{align*}
 		mit $I_0(x) \defeq \set{i \in I \ | \ g<_i(x) = 0 }$.
 	\end{field}
-	\xplain{Wie hei"st $I_0$ aus der Definition des \textit{Linearisierungskegels}?}
-	\xplain{Indexmenge der in x \textit{aktiven (Ungleichungs)restriktionen}}
+	\xfield{Wie hei"st $I_0$ aus der Definition des \textit{Linearisierungskegels}?}
+	\xfield{Indexmenge der in x \textit{aktiven (Ungleichungs)restriktionen}}
 \end{note}
 
 %Def. 1.4
 \begin{note}
-	\xplain{UUID}
+	\xplain{92a7c841-e7f9-4094-b889-3b7adceb6a0f}
 	\tags{}
 	\xfield{ Wie nennt man die Bedingung, dass $T(x) = L(x)$? }
 	\xfield{ \textit{Abadie Constraint Qualification (\textbf{ACG})}}
-	\xfield{ Wie nennt man die Bedingung, dass $\bar{\text{conv}\left(T(x)\right)}$?}
+	\xfield{ Wie nennt man die Bedingung, dass $\bar{\text{conv}\left(T(x)\right)} = L(x)$?}
 	\xfield{\textit{Guignard Constraint Qualification (\textbf{GCQ})}}
 	\xfield{ Wann ist \textit{ACG} erf"ullt?}
 	\xfield{ Falls $T(x) = L(x)$ }
@@ -364,7 +364,7 @@
 \end{note}
 
 \begin{note}
-	\xplain{UUID}
+	\xplain{10ae50eb-f330-4302-acf3-37722008f125}
 	\tags{}
 	\xfield{Wie hei"st eine Bedingung die \textit{ACQ} impliziert?}
 	\xfield{Regularit"atsbedingung}
@@ -405,7 +405,7 @@
 
 %1.2.4
 \begin{note}
-	\xplain{UUID}
+	\xplain{a40dda75-1e4f-4d36-aa19-04733c69739d}
 	\tags{KKT}
 	\xfield{Wie Lautet die KKT Bedingung (kurz)?}
 	\xfield{$\nabla f(x^*)\tran d \geq 0 \ \ \forall d \in L(x^*)$}
@@ -416,7 +416,7 @@
 			A \tran z \leq 0,\  B \tran z = 0, \ c \tran z > 0 \\
 			Au + Bv =c, \ \ u\geq 0
 		\end{gather}
-		nur ein l"osbar.
+		stets genau  ein l"osbar.
 	\end{field}
 	\xfield{ Wann gielten die KKK-Bedingungen ?}
 	\xfield{GCQ muss erf"ullt werden. Man sucht nach einer Regularit"atsbedingung.}
@@ -442,7 +442,7 @@
 
 %1.2.5 
 \begin{note}
-	\xplain{UUID}
+	\xplain{4648e945-f687-450e-b55e-e255cc8165db}
 	\tags{Sattelpunkte}
 	\xfield{Definiere einen \textit{Sattelpunkt} einer Lagrangefuntion.}
 	\begin{field}
@@ -455,4 +455,175 @@
 	
 \end{note}
 
+\begin{note}
+	\xplain{dd8da85e-d83d-44a0-bb52-e3ea2786ad10}
+	\tags{Erweiterte Slater-Bedingung}
+	\xfield{Was ist die erweiterte Slater-Bedingung?}
+	\begin{field}
+		$f: \Rn \rightarrow \R{}, \ g_1, \ldots , g_m: \Rn \rightarrow \R{}$ diff'bar und \textit{konvex}.
+		 $h: \Rn \rightarrow \R{p}$ \textit{affin linear}.
+	\end{field}
+	\xfield{Was gibt die erweiterte Slater-Bedingung ?}
+	\xfield{Es gelte die erweiterte Slater-Bedingung. Wenn $x*$ eine L"osung der OA, dann gibt es ein Sattelpunkt mit $x=x^*$.}	
+\end{note}
+
+\begin{note}
+	\xplain{ef2d2fd9-3a6d-4a9d-9645-646186e59528}
+	\tags{Dualtitaet}
+	\xfield{Was ist die \textit{primale} Optimierungsaufgabe?}
+	\begin{field}
+		\[P(x) \rightarrow \min_x\]
+		\[P: \Rn \rightarrow \R{} \cup \set{+ \infty} \ \ P(x) \defeq \sup_{u \in \R{m}_+,v \in \R{p}} \mathcal{L}(x, u, v)\]
+	\end{field}
+	\xfield{Was ist die \textit{duale} Optimierungsaufgabe?}
+	\begin{field}
+		\[D(x) \rightarrow \max_{u, v}, \ \ \text{bei } u\geq 0\]
+		\[D: \R{m} \times \R{p} \rightarrow \R{} \cup \set{+\infty}, \ \  D(u,v) \defeq \inf_{x\in \Rn}\mathcal{L}(x, u, v)\]
+	\end{field}
+	\xfield{Wie lautet der \textit{Schwacher Dualit"atssatz?}}
+	\begin{field}
+		\[ \forall (x,u,v) \in \Rn \times \R{m}_+ \times \R{p} : D(u,v) \leq P(x) \]
+		Ein $(x^*, u^*, v^*)$ ein SP von $\mathcal{L} \Leftrightarrow P(x^*) = D(u^*,v^*)$
+	\end{field}
+	\xfield{ Wann sind die \textit{primale} und die \textit{duale} Aufgaben beide L"osbar? Was sind dann die L"osungen?}
+	\xfield{ Falls es ein Sattelpunkt $(x^*,u^*,v^*)$ gibt. Die L"osungen sind dann $P(x^*)$ und $D(u^*,v^*)$.}
+	\xfield{ Wie hei"st $P(x^*) - D(u^*,v^*)$? }
+	\xfield{\textit{Dualit"atsl"ucke}}	
+\end{note}
+
+\begin{note}
+	\xplain{46fb1e9f-3833-4347-b4f8-f6d6f7e27d31}
+	\tags{2.Ordnung}
+	\begin{field}
+		Sei $(x^*, u^*, v^*)$  ein KKT-Punkt. Dann gilt es $d\tran \nabla f(x^*) \geq 0$.
+		 Was sagt uns es, wenn $>$ oder $=$ gelten?
+	\end{field}
+	\xfield{Bei "$>$" \ ist $d$ eine Anstiegsrichtung von $f$. "$=$" gibt uns keine Aussage dar"uber.}
+	\xfield{Wie lautet die \textit{notwendige optimalit"ats Bedingung 2.Ordnung} f"ur eine Lokale L"osung? Was wird vorausgesetzt?}
+	\begin{field}
+		Wenn $x*$ eine lokale L"osung und \textbf{LICQ} gilt, dann:
+		\[d\tran \nabla_{xx} \mathcal{L}(x^*,u^*,v^*)d \geq 0 \quad \forall d\in L^+(x^*,u^*)\]
+	\end{field}
+	\xfield{Wie ist $L^+(x, u)$ definiert?}
+	\begin{field}
+		\[L^+(x,u) \defeq \set{d \in L(x) \ \big| \  \nabla g_i(x)\tran d = 0 \text{ falls } u_i > 0} \subseteq L(x)\]
+	\end{field}
+	\xfield{Wann gilt $d\in L(x^*) \wedge d\tran \nabla f(x^*)=0 \Rightarrow d \in L^(x^*, u^*)$?}
+	\xfield{ Falls \textbf{MFCQ} in $x^*$ erf"ullt ist.}
+	\xfield{ Wie lautet die \textit{hinreichende Optimalit"ats Bedingung 2.Ordnung}? Was wird genau vorausgesetzt?}
+	\begin{field}
+		$f, g, h$ st"atig zweimal diff'bar. $(x^*,u^*,v^*)$ ein KKT-Punkt. $x^*$ ist eine \textit{strenge} lokale L"osung der OA, falls: 
+		\[d \tran \nabla_{xx} \mathcal{L}(x^*,u^*,v^*) d > 0 \quad \forall d \in L^+(x^*, u^*) / \set{0} \]
+	\end{field}
+\end{note}
+
+\begin{note}
+	\xplain{a6fb041f-4cd6-4dd6-8d2e-e2c22ab0dcc2}
+	\tags{}
+	\xfield{Wie definiert man eine Abstiegsrichtung?}
+	\begin{field}
+		$d$ ist eine Abstiegsrichtung eine Funktion $f$ an der Stelle $x$, falls $\exists \bar{\alpha} > 0$, so dass
+		\[f(x + \alpha d ) < f(x) \quad \forall \alpha \in (0, \bar{\alpha} ] \]
+	\end{field}
+	\xfield{ Wann ist ein Vektor $d$ eine Abstiegsrichtung einer Funktion $f$ an der Stelle $x$?}
+	\xfield{ Falls $\nabla f(x) \tran d < 0$}
+\end{note}
+
+\begin{note}
+	\xplain{bf7910cf-fdca-46d4-9667-432bb3eb6b9b}
+	\tags{}
+	\xfield{Wie l"auft das Gradientenverfahren mit Cauchy -- Schrittweitenwahl ab?}
+	\begin{field}
+		\begin{description}
+		\item[S1 Initialisierung] W"ahle $x^0 \in \Rn, a >0$ setze $k=0$.
+		\item[S2 Abbruchtest] Stoppe falls $\nabla f(x^k) = 0$.
+		\item[S3 Abstiegsrichtung] Setze $d^k = - \nabla f(x^k)$.
+		\item[S4 Schrittweite] Berechne $\alpha_k \geq 0$, so dass
+		      \[f(x^k + \alpha_k d^k) \leq  f(x^k + \alpha d^k) \forall \alpha \in [0, a].\]
+		
+		\item[S5 Update] Setze $x^{k+1} = x^k + \alpha_k d$ und $k = k +1$. Gehe zu S2.
+		\end{description}
+	\end{field}
+	% TODO: Gradienten"hnliche Richtungen.
+\end{note}
+
+\begin{note}
+	\xplain{e61d7fa2-68e9-4ac0-ad8c-4bfcc337a843}
+	\tags{}
+	\xfield{Beschriebe das globalisierte Newton-Verfahren (mit Amijo -- Schrittweite). }
+	\begin{field}
+		\small
+		\begin{description}
+			\item[S1 Initialisierung] W"ahle $x^0 \in \Rn, \delta \in (0,1), \rho > 0, q >0$, setze $k=0$.
+			\item[S2 Abbruchtest] Stopp falls $\nabla f(x^k) =0$.
+			\item[S3 Abstiegsrichtung] $H_k = \nabla^2 f(x^k)$, berechne $d^k$ aus  
+			\[ H_k d = - \nabla f(x^k).\]
+			    Falls nicht m"oglich, oder $\nabla f(x^k) \tran d^k \leq - \rho \norm{d^k}^q$ nicht erf"ullt, dann
+			    setze $d^k = -\nabla f(x^k)$.
+			\item[S4 Schrittweite] \[\alpha_k = \max\set{\alpha \in S \big | f(x^k + \alpha d^k) \leq f(x^k) + \delta \alpha \nabla f(x^k) \tran d^k }\]
+			\item[S5 Update] Setze $x^k = x^k + \alpha_k d^k$ und $k=k+1$ Gehe zu S2.
+		\end{description}
+	\end{field}
+	\xfield{ Wann hat die Folge $\{x^k\}$, erzeugt vom globalisierten Newton Verfahren, mindestens einen H"aufungspunkt?}
+	\xfield{ Falls die Niveaumenge $W(x^0) \defeq \set{x \in \Rn \big | f(x) \leq f(x^0)}$ beschr"ankt ist. }
+	\xfield{ Wann ist die Niveaumenge $W(x^0)$ kompakt (also auch beschr"ankt)?}
+	\xfield{Es reicht die gleichm"a"sige Konvexit"at der Zielfunktion aus.}	
+\end{note}
+
+\begin{note}
+	\xplain{925c20a8-ea43-4e27-86c6-a88089a616da}
+	\tags{}
+	\xfield{ Definiere eine \textbf{Q -- lineare Konvergenz}.}
+	\begin{field}
+		Seien $\{z^k\} \subset \R{l}, z^* \in \R{l}, z^* \not\in \{z^k\}$.
+	    Die Folge konvergiert \textbf{Q--linear} gegen $z^*$, falls $\exists \sigma \in (0,1), k_0 \in \N$, so dass $\forall k \geq k_0$
+	    \[\frac{\norm{z^{k+1} - z^*}}{\norm{z^k - z^*}} \leq \sigma . \]
+	\end{field}
+		\xfield{ Definiere eine \textbf{Q -- superlineare Konvergenz}.}
+	\begin{field}
+		Seien $\{z^k\} \subset \R{l}, z^* \in \R{l}, z^* \not\in \{z^k\}$.
+	    Die Folge konvergiert \textbf{Q--superlinear} gegen $z^*$, falls
+	    \[ \lim_{k\rightarrow \infty} \frac{\norm{z^{k+1} - z^*}}{\norm{z^k - z^*}} = 0 . \]
+	\end{field}
+		\xfield{ Definiere eine \textbf{Q -- Ordnung $\tau$ Konvergenz}.}
+	\begin{field}
+		Seien $\{z^k\} \subset \R{l}, z^* \in \R{l}, z^* \not\in \{z^k\}$.
+	    Die Folge konvergiert mit der \textbf{Q--Ordnung $\mathbb{\tau}$ } gegen $z^*$, falls $\lim_{k \rightarrow \infty} z^k = z^*$
+	     und $\exists\sigma >0 , \tau > 1$, so dass $\forall k \in \N$:
+	    \[\limsup_{k \rightarrow \infty }\frac{\norm{z^{k+1} - z^*}}{\norm{z^k - z^*}^\tau} \leq \sigma . \]
+	\end{field}
+	\begin{field}
+		Was bedeutet, dass eine Folge $\{z^k\}$ gegen $z^*$ \textbf{R--linear}, \textbf{R--superlinear}, oder mit \textbf{R--Ordnung $\tau$} konvergiert?
+	\end{field}
+	\begin{field}
+		$\exists$ eine Folge ${\mu_k} \subset (0, \infty) $, so dass
+		\[\norm{z^k - z^*} \leq \mu_k \quad \forall k \in \N\]
+		und $\{ \mu_k\}$ mit der entsprechenden Q--Konvergenz gegen $0$ konvergiert. 
+	\end{field}
+\end{note}
+
+\begin{note}
+	\xplain{273d8d2b-6081-45ae-95e7-d772482cd732}
+	\tags{}
+	\xfield{Wie ist die \textit{quadratische Modellfunktion} bei dem Trust-Region-Verfahren  definiert?}
+	\xfield{\[m_k(p) \defeq f(x^k) + \nabla f(x^k) \tran p + \frac{1}{2} p\tran B_k p ,\] mit $B_k \in \R{n \times n}$ symmetrisch, $p=x - x^k$. }
+	\xfield{Wie ist der \textbf{G"utema"s} (Trust-Region-Verfahren) definiert?}
+	\xfield{\[\rho_k\ \defeq \frac{f(x^k) - f(x^k + p )}{m_k(0) - m_k(p) }\]}
+	\xfield{Wie sieht der Trust-Region-Verfahren Algorithmus aus?}
+	\begin{field}
+		\small
+		\begin{description}
+			\item[S1] W"ahle $x^0 \in \Rn, \Delta_0 > 0, \ \ 0< \eta_1 < \eta_2 < 1, \ \ {0 < \sigma_1 < 1 < \sigma_2}$. S"atze $k=0$.
+			\item[S2] Stoppe falls $\nabla f(x^k) = 0$.
+			\item[S3] W"ahle symmetrische Matrix $B_k $ Bestimme die L"osung von 
+			\[m_k(p) \rightarrow \min \quad , \norm{p} \leq \Delta_k\]
+			\item[S4] Berechne $\rho_k$. \\
+				Falls $\rho_k \leq \eta_1$ setze $\Delta_{k+1} = \sigma_1 \Delta_k$ \\
+				Falls $\rho_k \in (\eta_1, \eta_2)$ setze $\Delta_{k+1} =  \Delta_k$ \\
+				Falls $\rho_k \geq \eta_2$ setze $\Delta_{k+1} = \sigma_2 \Delta_k$ \\
+			\item[S5] Falls $\rho_k > \eta_1$, setze $x^{k+1} = x^k + p^k, k = k+1$. Gehe zu S2.
+			\item[S6] Setze $x^{k+1} = x^k, k=k+1$ gehe zu S3.
+		\end{description}
+	\end{field}
+\end{note}
 \end{document}
